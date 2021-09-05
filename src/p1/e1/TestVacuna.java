@@ -1,4 +1,4 @@
-package p1e1;
+package p1.e1;
 
 class TestVacuna {
 

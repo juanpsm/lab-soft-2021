@@ -1,4 +1,4 @@
-package geometria;
+package p1.e6.geometria;
 
 public abstract class FiguraGeometrica {
 	public FiguraGeometrica() {
