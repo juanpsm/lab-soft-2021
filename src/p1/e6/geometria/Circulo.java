@@ -28,7 +28,7 @@ public class Circulo extends FiguraGeometrica {
 	}
 
 	@Override
-	public int area() {
+	public Integer area() {
 		return (int) (Math.PI * (this.radio * this.radio));
 	}
 }

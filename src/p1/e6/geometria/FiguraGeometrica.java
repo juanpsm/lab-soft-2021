@@ -8,13 +8,17 @@ public abstract class FiguraGeometrica {
 	private String Color;
 	
 	abstract void dibujar();
-	abstract int area();
+	public abstract Integer area();
 	
 	public String getColor() {
 		return Color;
 	}
 	public void setColor(String color) {
 		Color = color;
+	}
+	
+	public static int comparar(FiguraGeometrica a, FiguraGeometrica b) {
+	    return a.area().compareTo(b.area());
 	}
 	
 }
