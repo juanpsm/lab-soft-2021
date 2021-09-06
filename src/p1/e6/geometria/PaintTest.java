@@ -7,15 +7,20 @@ public class PaintTest {
 		
 		FiguraGeometrica[] arreglo = paint.getPaleta();
 		
-		Circulo testCirculo = new Circulo();
+		
+		// Correccion:
+		// Se podría haber usado "arreglo[i] instanceof Circulo" para detectar una instancia de Circulo
+		
+		// Circulo testCirculo = new Circulo();
 		
 		System.out.println("Figuras en el arreglo:");
 		for (int i=0;i<arreglo.length;i++) {
 			// arreglo[i].dibujar();
 			System.out.print(" - Figura con area ");
 			System.out.print(arreglo[i].area());
-			if (arreglo[i].getClass().equals(testCirculo.getClass()) ) {
-				System.out.print(" approx. Su radio es ");
+			// if (arreglo[i].getClass().equals(testCirculo.getClass()) ) {
+			if (arreglo[i] instanceof Circulo) {
+			    System.out.print(" approx. Su radio es ");
 				System.out.print(((Circulo) arreglo[i]).getRadio());
 			}
 			System.out.println(".");
