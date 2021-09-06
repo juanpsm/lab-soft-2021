@@ -1,4 +1,4 @@
-package p2.e2;
+package p2.e1.b;
 
 public interface InstrumentoMusical {
 	void hacerSonar();

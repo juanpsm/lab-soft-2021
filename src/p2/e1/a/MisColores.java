@@ -1,4 +1,4 @@
-package p2.e1;
+package p2.e1.a;
 
 interface ColPrimarios {
 int ROJO=1, VERDE=2, AZUL=4;
