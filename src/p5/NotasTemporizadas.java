@@ -9,6 +9,6 @@ public class NotasTemporizadas {
 		this.duracion = duracion;
 	}
 	public String toString() {
-		return this.nota.toString() + ", " + this.duracion + "segundos";
+		return this.nota.toString() + " por " + this.duracion + " segundos";
 	}
 }
