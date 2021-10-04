@@ -1,4 +1,4 @@
-package p3.practica3;
+package p3.e1.practica3;
 
 public class Stack {
 	private java.util.ArrayList items;
@@ -18,7 +18,7 @@ public class Stack {
 		
 	}
 	public static void main(String[] args) {
-		
+		System.out.println(args[0]);
 	}
 
 }
