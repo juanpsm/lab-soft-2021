@@ -1,11 +1,11 @@
 package p5;
 
-public class Guitarra implements InstrumentoMusical {
+public class Piano implements InstrumentoMusical {
 	public void hacerSonar(){
 		System.out.println("Suena  " + queEs());
 	}
 	public String queEs() {
-		return "la guitarra";
+		return "el piano";
 	}
 	@Override
 	public void hacerSonar(Notas n, int duracion) {

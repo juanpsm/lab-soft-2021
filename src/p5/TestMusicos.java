@@ -14,7 +14,12 @@ public class TestMusicos {
 		arregloNotas.add(new NotasTemporizadas(Notas.DO, 6));
 		Cancion color_humano = new Cancion("Color humano", arregloNotas);
 		System.out.println(Musicos.FLACO.tocar(color_humano));
-//		Musicos s = new Musicos(); // no se puede instanciar este strictfpo
+//		Musicos s = new Musicos(); // no se puede instanciar este tipo
+//		Musicos.FLACO = null; // tampoco deja modificarlo
+		// Si se puede cambiar el comportamiento con los correspondientes setters
+		InstrumentoMusical piano = new Piano();
+		Musicos.FLACO.cambiarInstrumento(piano);
+		System.out.println(Musicos.FLACO);
 		
 	}
 }
