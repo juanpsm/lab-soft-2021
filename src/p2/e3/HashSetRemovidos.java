@@ -3,23 +3,26 @@ package p2.e3;
 import java.util.Collection;
 import java.util.HashSet;
 
-public class HashSetRemovidos<E> extends HashSet<E> {
+public class HashSetRemovidos<E> extends HashSetAgregadosAgregation<E> {
 	private int cantidadEliminados = 0;
 	public HashSetRemovidos() {
+		hs = new HashSet<E>();
 	}
-	public HashSetRemovidos(int initCap, float loadFactor) {
-		super(initCap, loadFactor);
+	public boolean remove(E e) {
+		if (hs.remove(e)) {
+			cantidadEliminados++;
+			System.out.println("remove: (" + e + ")");
+			return true;
+		}
+		return false;
 	}
-	@Override public boolean remove(E e) {
-		cantidadEliminados++;
-		System.out.println("add: 1");
-		return super.remove(e);
-	}
-	@Override public boolean removeAll(Collection<? extends E> c) {
-		cantidadEliminados += c.size();
-		System.out.print("addAll: ");
-		System.out.println(c.size());
-		return super.removeAll(c);
+	public boolean removeAll(Collection<? extends E> c) {
+		if (hs.removeAll(c)) {
+			cantidadEliminados += c.size();
+			System.out.println("removeAll: " + c.size() + " (" + c + ")");
+			return true;
+		}
+		return false;
 	}
 	public int getCantidadEliminados() {
 		return cantidadEliminados;

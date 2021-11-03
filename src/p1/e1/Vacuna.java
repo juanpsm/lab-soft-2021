@@ -1,5 +1,7 @@
 package p1.e1;
 
+import java.util.Objects;
+
 public class Vacuna {
 	public Vacuna(String marca, String paisDeOrigen, String enfermedadPrevenida, int cantidadDeDosis) {
 		super();
@@ -40,18 +42,6 @@ public class Vacuna {
 	}
 	@Override
 	public String toString() {
-
-//		StringBuilder builder = new StringBuilder();
-//		builder.append("Vacuna [marca=");
-//		builder.append(marca);
-//		builder.append(", paisDeOrigen=");
-//		builder.append(paisDeOrigen);
-//		builder.append(", enfermedadPrevenida=");
-//		builder.append(enfermedadPrevenida);
-//		builder.append(", cantidadDeDosis=");
-//		builder.append(cantidadDeDosis);
-//		builder.append("]");
-//		return builder.toString();
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("Vacuna [marca=");
 		buffer.append(marca);
@@ -64,5 +54,21 @@ public class Vacuna {
 		buffer.append("]");
 		return buffer.toString();
 	}
+	
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vacuna v = (Vacuna) o;
+        return Objects.equals(marca, v.getMarca()) &&
+                Objects.equals(paisDeOrigen, v.getPaisDeOrigen()) &&
+                Objects.equals(enfermedadPrevenida, v.getEnfermedadPrevenida()) &&
+                Objects.equals(cantidadDeDosis, v.getCantidadDeDosis());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(marca, paisDeOrigen, enfermedadPrevenida, cantidadDeDosis);
+    }
 	
 }

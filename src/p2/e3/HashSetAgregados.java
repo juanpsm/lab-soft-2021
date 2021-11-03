@@ -7,18 +7,14 @@ public class HashSetAgregados<E> extends HashSet<E> {
 	private int cantidadAgregados = 0;
 	public HashSetAgregados() {
 	}
-	public HashSetAgregados(int initCap, float loadFactor) {
-		super(initCap, loadFactor);
-	}
 	@Override public boolean add(E e) {
 		cantidadAgregados++;
-		System.out.println("add: 1");
+		System.out.println("add: (" + e + ")");
 		return super.add(e);
 	}
 	@Override public boolean addAll(Collection<? extends E> c) {
 		cantidadAgregados += c.size();
-		System.out.print("addAll: ");
-		System.out.println(c.size());
+		System.out.println("addAll: " + c.size() + " (" + c + ")");
 		return super.addAll(c);
 	}
 	public int getCantidadAgregados() {
