@@ -44,6 +44,8 @@ public class Mapper {
 					);
 					this.appendToFileWriter(f, 
 							this.wrapTag(this.valueTag, x.get(o).toString())
+							/*Method m = beanClass.getMethod(getNombre);
+String valor = m.invoke(obj).toString();*/
 					);
 				}
 			}
